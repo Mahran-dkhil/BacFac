@@ -46,6 +46,10 @@
         "twig/twig": "^2.12|^3.0"
     },
     "config": {
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.2"
+        },
         "allow-plugins": {
             "php-http/discovery": true,
             "symfony/flex": true,
@@ -76,8 +80,8 @@
     },
     "scripts": {
         "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd",
+            "cache:clear": "@php bin/console cache:clear",
+            "assets:install %PUBLIC_DIR%": "@php bin/console assets:install %PUBLIC_DIR%",
             "importmap:install": "symfony-cmd"
         },
         "post-install-cmd": [
