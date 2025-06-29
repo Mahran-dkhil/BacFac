@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: bac-score-app
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    buildCommand: ""
+    startCommand: php -S 0.0.0.0:10000 -t public
+    autoDeploy: true
